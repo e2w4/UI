@@ -536,7 +536,7 @@ function NullUL:CreateWindow(Config: WindowConfig?)
 			Text = Tab.Title,
 			TextColor3 = Theme.SubText,
 			TextSize = 13,
-			Font = Enum.Font.GothamMedium,
+			Font = Enum.Font.GothamBold,
 			TextXAlignment = Enum.TextXAlignment.Left,
 			TextTransparency = Window.SidebarExpanded and 0 or 1,
 			TextTruncate = Enum.TextTruncate.AtEnd,
@@ -632,7 +632,7 @@ function NullUL:CreateWindow(Config: WindowConfig?)
 			Create("TextLabel", {
 				Parent = Btn_Frame, Size = UDim2.new(1, -40, 1, 0), Position = UDim2.new(0, 10, 0, 0),
 				BackgroundTransparency = 1, Text = Opts.Title or "Button", TextColor3 = Theme.Text,
-				TextSize = 14, Font = Enum.Font.GothamMedium, TextXAlignment = Enum.TextXAlignment.Left,
+				TextSize = 14, Font = Enum.Font.GothamBold, TextXAlignment = Enum.TextXAlignment.Left,
 			})
 			Create("ImageLabel", {
 				Parent = Btn_Frame, Size = UDim2.new(0, 16, 0, 16), Position = UDim2.new(1, -26, 0.5, -8),
@@ -657,7 +657,7 @@ function NullUL:CreateWindow(Config: WindowConfig?)
 			Create("TextLabel", {
 				Parent = Tgl_Frame, Size = UDim2.new(1, -60, 1, 0), Position = UDim2.new(0, 10, 0, 0),
 				BackgroundTransparency = 1, Text = Opts.Title or "Toggle", TextColor3 = Theme.Text,
-				TextSize = 14, Font = Enum.Font.GothamMedium, TextXAlignment = Enum.TextXAlignment.Left,
+				TextSize = 14, Font = Enum.Font.GothamBold, TextXAlignment = Enum.TextXAlignment.Left,
 			})
 			local Indicator = Create("Frame", { Parent = Tgl_Frame, Size = UDim2.new(0, 36, 0, 20), Position = UDim2.new(1, -46, 0.5, -10), BackgroundColor3 = Theme.Background }) :: Frame
 			Create("UICorner", { Parent = Indicator, CornerRadius = UDim.new(1, 0) })
@@ -696,7 +696,7 @@ function NullUL:CreateWindow(Config: WindowConfig?)
 			Create("TextLabel", {
 				Parent = Sld_Frame, Size = UDim2.new(1, -20, 0, 25), Position = UDim2.new(0, 10, 0, 5),
 				BackgroundTransparency = 1, Text = Opts.Title or "Slider", TextColor3 = Theme.Text,
-				TextSize = 14, Font = Enum.Font.GothamMedium, TextXAlignment = Enum.TextXAlignment.Left,
+				TextSize = 14, Font = Enum.Font.GothamBold, TextXAlignment = Enum.TextXAlignment.Left,
 			})
 			local Value_Lbl = Create("TextLabel", {
 				Parent = Sld_Frame, Size = UDim2.new(0, 50, 0, 25), Position = UDim2.new(1, -60, 0, 5),
@@ -757,7 +757,7 @@ function NullUL:CreateWindow(Config: WindowConfig?)
 			Create("TextLabel", {
 				Parent = Dd_Frame, Size = UDim2.new(1, -40, 0, 40), Position = UDim2.new(0, 10, 0, 0),
 				BackgroundTransparency = 1, Text = Opts.Title or "Dropdown", TextColor3 = Theme.Text,
-				TextSize = 14, Font = Enum.Font.GothamMedium, TextXAlignment = Enum.TextXAlignment.Left,
+				TextSize = 14, Font = Enum.Font.GothamBold, TextXAlignment = Enum.TextXAlignment.Left,
 			})
 			local Selected_Lbl = Create("TextLabel", {
 				Parent = Dd_Frame, Size = UDim2.new(0, 100, 0, 40), Position = UDim2.new(1, -130, 0, 0),
@@ -838,7 +838,7 @@ function NullUL:CreateWindow(Config: WindowConfig?)
 			Create("TextLabel", {
 				Parent = Cp_Frame, Size = UDim2.new(1, -60, 0, 40), Position = UDim2.new(0, 10, 0, 0),
 				BackgroundTransparency = 1, Text = Opts.Title or "Colorpicker", TextColor3 = Theme.Text,
-				TextSize = 14, Font = Enum.Font.GothamMedium, TextXAlignment = Enum.TextXAlignment.Left,
+				TextSize = 14, Font = Enum.Font.GothamBold, TextXAlignment = Enum.TextXAlignment.Left,
 			})
 			local Display = Create("Frame", { Parent = Cp_Frame, Size = UDim2.new(0, 32, 0, 22), Position = UDim2.new(1, -44, 0, 9), BackgroundColor3 = Colorpicker.Value }) :: Frame
 			Create("UICorner", { Parent = Display, CornerRadius = UDim.new(0, 5) })
@@ -889,7 +889,7 @@ function NullUL:CreateWindow(Config: WindowConfig?)
 			local Hex_Box = Create("TextBox", {
 				Parent = Hex_Row, Size = UDim2.new(1, -60, 1, 0), Position = UDim2.new(0, 16, 0, 0),
 				BackgroundColor3 = Theme.Background, Text = Color_To_Hex(Colorpicker.Value), TextColor3 = Theme.Text,
-				TextSize = 13, Font = Enum.Font.GothamMedium, ClearTextOnFocus = false,
+				TextSize = 13, Font = Enum.Font.GothamBold, ClearTextOnFocus = false,
 			}) :: TextBox
 			Create("UICorner", { Parent = Hex_Box, CornerRadius = UDim.new(0, 5) })
 			Create("UIPadding", { Parent = Hex_Box, PaddingLeft = UDim.new(0, 8) })
@@ -999,7 +999,7 @@ function NullUL:CreateWindow(Config: WindowConfig?)
 			local Kb_Frame = Create("Frame", { Parent = Wrapper, Size = UDim2.new(1, 0, 0, 40), BackgroundColor3 = Theme.Element })
 			Create("UICorner", { Parent = Kb_Frame, CornerRadius = UDim.new(0, 6) })
 			Create("UIStroke", { Parent = Kb_Frame, Color = Theme.Border, Thickness = 1 })
-			Create("TextLabel", { Parent = Kb_Frame, Size = UDim2.new(1, -100, 1, 0), Position = UDim2.new(0, 10, 0, 0), BackgroundTransparency = 1, Text = Opts.Title or "Keybind", TextColor3 = Theme.Text, TextSize = 14, Font = Enum.Font.GothamMedium, TextXAlignment = Enum.TextXAlignment.Left })
+			Create("TextLabel", { Parent = Kb_Frame, Size = UDim2.new(1, -100, 1, 0), Position = UDim2.new(0, 10, 0, 0), BackgroundTransparency = 1, Text = Opts.Title or "Keybind", TextColor3 = Theme.Text, TextSize = 14, Font = Enum.Font.GothamBold, TextXAlignment = Enum.TextXAlignment.Left })
 			local Bind_Btn = Create("TextButton", { Parent = Kb_Frame, Size = UDim2.new(0, 80, 0, 24), Position = UDim2.new(1, -90, 0.5, -12), BackgroundColor3 = Theme.Background, Text = tostring(Keybind.Value), TextColor3 = Theme.SubText, TextSize = 12, Font = Enum.Font.Gotham }) :: TextButton
 			Create("UICorner", { Parent = Bind_Btn, CornerRadius = UDim.new(0, 4) })
 
@@ -1043,7 +1043,7 @@ function NullUL:CreateWindow(Config: WindowConfig?)
 			local Inp_Frame = Create("Frame", { Parent = Wrapper, Size = UDim2.new(1, 0, 0, 40), BackgroundColor3 = Theme.Element })
 			Create("UICorner", { Parent = Inp_Frame, CornerRadius = UDim.new(0, 6) })
 			Create("UIStroke", { Parent = Inp_Frame, Color = Theme.Border, Thickness = 1 })
-			Create("TextLabel", { Parent = Inp_Frame, Size = UDim2.new(0.4, 0, 1, 0), Position = UDim2.new(0, 10, 0, 0), BackgroundTransparency = 1, Text = Opts.Title or "Input", TextColor3 = Theme.Text, TextSize = 14, Font = Enum.Font.GothamMedium, TextXAlignment = Enum.TextXAlignment.Left })
+			Create("TextLabel", { Parent = Inp_Frame, Size = UDim2.new(0.4, 0, 1, 0), Position = UDim2.new(0, 10, 0, 0), BackgroundTransparency = 1, Text = Opts.Title or "Input", TextColor3 = Theme.Text, TextSize = 14, Font = Enum.Font.GothamBold, TextXAlignment = Enum.TextXAlignment.Left })
 			local Text_Box = Create("TextBox", { Parent = Inp_Frame, Size = UDim2.new(0.6, -20, 0, 26), Position = UDim2.new(0.4, 10, 0.5, -13), BackgroundColor3 = Theme.Background, Text = Input_Obj.Value, PlaceholderText = Opts.Placeholder or "", TextColor3 = Theme.Text, PlaceholderColor3 = Theme.SubText, TextSize = 13, Font = Enum.Font.Gotham, ClearTextOnFocus = false }) :: TextBox
 			Create("UICorner", { Parent = Text_Box, CornerRadius = UDim.new(0, 4) })
 
@@ -1108,7 +1108,7 @@ function NullUL:CreateWindow(Config: WindowConfig?)
 
 		if Opts.Buttons then
 			for _, Btn_Opts in ipairs(Opts.Buttons) do
-				local Btn = Create("TextButton", { Parent = Btn_Container, Size = UDim2.new(0, 80, 1, 0), BackgroundColor3 = Theme.Element, Text = Btn_Opts.Title or "Button", TextColor3 = Theme.Text, TextSize = 13, Font = Enum.Font.GothamMedium, ZIndex = 53 }) :: TextButton
+				local Btn = Create("TextButton", { Parent = Btn_Container, Size = UDim2.new(0, 80, 1, 0), BackgroundColor3 = Theme.Element, Text = Btn_Opts.Title or "Button", TextColor3 = Theme.Text, TextSize = 13, Font = Enum.Font.GothamBold, ZIndex = 53 }) :: TextButton
 				Create("UICorner", { Parent = Btn, CornerRadius = UDim.new(0, 4) })
 				Btn.MouseEnter:Connect(function() Tween(Btn, { BackgroundColor3 = Theme.ElementHover }, 0.15) end)
 				Btn.MouseLeave:Connect(function() Tween(Btn, { BackgroundColor3 = Theme.Element }, 0.15) end)
